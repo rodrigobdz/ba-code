@@ -1,0 +1,25 @@
+
+1. From segmenter output folder:
+
+	cd to live content representation
+	$ mkdir V{1,2,3,4,5,6,7,8} A1
+
+	video/{1,2,3,4,5,6,7,8}/* -> <live content>/V{1,2,3,4,5,6,7,8}
+	audio/und/mp4a/* -> <live content>/A1/
+	stream.mpd -> <live content>/Manifest.mpd
+
+2. Manifest adaptation:
+
+	a. Add contentType (audio and video) to AdaptationSet
+	b. Change segment template (remove seg- from segment template)
+	c. Change id to A1 and V{1,2,3,4,5,6,7,8}
+	
+	d. $ renameseg V{1,2,3,4,5,6,7,8}
+	e. $ renameseg A1
+
+3.VOD analyzer 
+
+	a. $ cd /var/www/html/dash-live-source-simulator/
+	b. $ tools/run_vodanalyzer.sh /var/www/html/dash/vod/sintel_250ms/Manifest.mpd
+	c. Change segment_duration_in_s in sintel_250ms.cfg
+	d. $ mv sintel_250ms* /var/www/html/vod_configs/

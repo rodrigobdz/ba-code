@@ -1,0 +1,9 @@
+
+	Path to audio 
+		$ cd ~/Livesim/content/raw/sintel/mp4/sintel_audio.mp4
+
+	Path to raw video content 
+		$ cd ~/Rodrigo/sintel/
+
+	Path to live content
+		$ cd /var/www/html/dash/vod/<name>

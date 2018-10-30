@@ -1,0 +1,2 @@
+
+$ x264 --output sintel_2000ms_240p_180kpbs.264 --verbose --tune psnr --psnr --fps 24 --preset slow --bitrate 180 --vbv-maxrate 360 --vbv-bufsize 360 --min-keyint 48 --keyint 48 --no-scenecut --pass 1 --video-filter "resize:width=564,height=240" ~/Rodrigo/sintel/frames/%08d.tif 2>&1 | tee psnr.txt

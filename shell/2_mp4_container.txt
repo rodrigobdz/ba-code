@@ -1,0 +1,2 @@
+
+$ mp4box -add <input movie>.264 -fps 24 <output movie>.mp4

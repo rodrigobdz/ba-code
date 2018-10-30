@@ -1,0 +1,2 @@
+
+$ mp4dash --profile=live --mpd-name=Manifest.mpd --verbose --debug <all fragmented video streams> <fragmented audio stream>

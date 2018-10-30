@@ -1,0 +1,2 @@
+
+$ mp4fragment --fragment-duration <duration in ms> <input file>.mp4 <output file>_fragmented.mp4
